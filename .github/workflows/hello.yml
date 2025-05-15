@@ -1,17 +1,25 @@
+# cosas que debe tener un Workflo file
+# 1. name: nombre del workflow
 name: Say hello
-
+# 2. on: evento que lo activa (push, pull_request, schedule, etc)
 on:
-  push:
+  push: # Cuando se hace un push a la rama main Se ejecuta el workflow
     branches:
       - main
-
+# 3. jobs: tareas que se ejecutan en el workflow
 jobs:
-  hello_world:
-    runs-on: ubuntu-18.04
+  hello_world: # nececitamos un nombre para el job
+    runs-on: ubuntu-18.04 # sistema operativo donde se ejecuta el job
+    # 4. steps: pasos que se ejecutan en cada job
     steps:
       - name: Echo the message
+        # 5. run: comando que se ejecuta en cada paso
         run: |
-          echo "Hola midu!"
+          echo "Hola Yo!"
       - name: Dime la fecha
         run: date
       - run: ls -l
+# 6. env: variables de entorno que se pueden usar en el workflow
+# 7. secrets: variables de entorno que se pueden usar en el workflow y que no se ven en el log
+# 8. uses: acciones que se pueden usar en el workflow
+
