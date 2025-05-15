@@ -9,7 +9,7 @@ on:
 # 3. jobs: tareas que se ejecutan en el workflow
 jobs:
   hello_world: # nececitamos un nombre para el job
-    runs-on: ubuntu-22.04.5 # sistema operativo donde se ejecuta el job
+    runs-on: ubuntu-latest # sistema operativo donde se ejecuta el job
     # 4. steps: pasos que se ejecutan en cada job
     steps:
       - name: Echo the message
